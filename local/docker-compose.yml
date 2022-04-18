@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  database:
+    image: postgres
+    container_name: database_student
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=amigos
+      - POSTGRES_DB=db_projeto
+    volumes:
+      - ./postgres_script:/docker-entrypoint-initdb.d
+
+volumes:
+  pgdata:
+    driver: local

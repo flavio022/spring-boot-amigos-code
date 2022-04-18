@@ -1,0 +1,17 @@
+
+datasource:
+  db-url: jdbc:postgresql://localhost:5432/db_projeto
+  db-username: docker
+  db-password: amigos
+  db-schema: banco_student
+  pool-size: 5
+  max-lifetime: 60000
+  driver-database: org.postgresql.Driver
+  execucao-dll: none
+  dialect: org.hibernate.dialect.PostgreSQL10Dialect
+  physical-naming-strategy: com.vladmihalcea.hibernate.type.util.CamelCaseToSnakeCaseNamingStrategy
+
+
+server:
+  error:
+    include-message: always
